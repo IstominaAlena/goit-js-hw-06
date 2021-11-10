@@ -5,14 +5,14 @@ const inputEl = document.querySelector('#validation-input');
 
 function onBlurFn() {
   const dataLengthEl = inputEl.getAttribute('data-length');
-
-  if (inputEl.value.length < dataLengthEl) {
+  console.log(typeof dataLengthEl);
+  if (inputEl.value.length !== Number(dataLengthEl)) {
     inputEl.style.borderColor = 'red';
     alert(`В строке должно быть ${dataLengthEl} символов.`);
     return;
   }
-  inputEl.style.borderColor = 'green';
-  alert(`Отлично!`);
+
+  inputEl.style.borderColor = 'yellowgreen';
   return;
 }
 

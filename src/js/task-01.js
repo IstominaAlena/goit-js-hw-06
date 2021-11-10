@@ -5,8 +5,8 @@
 // текст заголовка элемента(тега < h2 >) и количество элементов в категории(всех вложенных в него < li >).
 
 const categoriesEl = document.querySelector('#categories');
+const itemsArray = categoriesEl.querySelectorAll('#categories > li');
 
-const itemsArray = [...categoriesEl.children];
 console.log(`Number of categories:`, itemsArray.length);
 
 itemsArray.forEach(item => {

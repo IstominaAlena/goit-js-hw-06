@@ -23,12 +23,13 @@ const images = [
 
 const galleryListEl = document.querySelector('.gallery');
 galleryListEl.classList.add('list');
+const galleryArray = images
+  .map(image => {
+    let imageEl = `<img src=${image.url} alt=${image.alt.replaceAll(' ', '-')} width = 340/>`;
+    let galleryItemEl = `<li class = "item">${imageEl}</li>`;
+    return galleryItemEl;
+  })
+  .join('');
 
-images.forEach(image => {
-  let imageEl = `<img src=${image.url} alt=${image.alt.replaceAll(' ', '-')} width = 340/>`;
-  let galleryItemEl = `<li class = "item">${imageEl}</li>`;
-
-  galleryListEl.insertAdjacentHTML('afterbegin', galleryItemEl);
-});
-
+galleryListEl.insertAdjacentHTML('afterbegin', galleryArray);
 // Минимальное оформление галереи находится в css/common.css
