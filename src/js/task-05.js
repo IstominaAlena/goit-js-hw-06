@@ -15,3 +15,7 @@ function outputFn(event) {
 }
 
 refs.input.addEventListener('input', outputFn);
+
+setTimeout(() => {
+  console.log(refs.input);
+}, 0);

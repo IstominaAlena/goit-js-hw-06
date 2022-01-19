@@ -9,12 +9,6 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 
 const listEl = document.querySelector('#ingredients');
 
-// ingredients.forEach(ingredient => {
-//   let itemEl = document.createElement('li');
-//   itemEl.classList.add('item');
-//   itemEl.textContent = ingredient;
-//   listEl.append(itemEl);
-// });
 const arrayIngredients = ingredients.map(ingredient => {
   let itemEl = document.createElement('li');
   itemEl.textContent = ingredient;
